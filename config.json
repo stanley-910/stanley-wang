@@ -1,0 +1,37 @@
+{
+  "title": "Stanley Wang",
+  "name": "Stanley Wang",
+  "social": {
+    "github": "stanley-utf8",
+    "linkedin": "stanley-utf8"
+  },
+  "email": "stanley.wang.cs@gmail.com",
+  "ps1_hostname": "stanley-wang",
+  "ps1_username": "dev",
+  "repo": "https://github.com/stanley-utf8/portfolio",
+  "resume_url": "https://stanley-wang-resume.tiiny.site/",
+  "colors": {
+    "light": {
+      "background": "#FBF1C9",
+      "foreground": "#3C3836",
+      "yellow": "#D79921",
+      "green": "#98971A",
+      "gray": "#7C6F64",
+      "blue": "#458588",
+      "red": "#CA2124"
+    },
+    "dark": {
+      "background": "#100F0F",
+      "foreground": "#E5E9F0",
+      "yellow": "#EBCB8B",
+      "green": "#a6e3a1",
+      "gray": "#cdd6f4",
+      "blue": "#89b4fa",
+      "red": "#BF616A",
+      "purple": "#cba6f7",
+      "t4": "#cc8e15",
+      "datamines": "#FFB6C1",
+      "chani": "#F18904"
+    }
+  }
+}

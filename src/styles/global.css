@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');*/
+@font-face {
+  font-family: 'Hack';
+  src: url(/assets/fonts/Hack-NF.ttf);
+  display: swap;
+}
+
+* {
+  font-family: 'Hack', monospace;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+
+html,
+body,
+body > div:first-child,
+div#__next,
+div#__next > div {
+  height: 100%;
+  overflow: auto;
+
+}
+
+
+/* CRT effect wrapper */
+.crt-text-effect {
+  animation: textShadow 1.6s infinite;
+}
+
+.crt-text {
+  text-shadow: 0.4389924193300864px 0 1px rgba(0, 30, 255, 0.5),
+    -0.4389924193300864px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+}
+
+.crt-text-blue {
+  text-shadow: 0.4389924193300864px 0 1px rgba(0, 102, 255, 0.5),
+    -0.4389924193300864px 0 1px rgba(0, 102, 255, 0.3), 0 0 3px;
+}
+/* Scanlines overlay */
+.crt-effect::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 5px /* scanline height */
+  );
+  pointer-events: none;
+  z-index: 51;
+}
+
+/* Screen flicker animation */
+@keyframes textShadow {
+  0% {
+    text-shadow: 3px 0 1px rgba(0, 30, 255, 1), -3px 0 1px rgba(255, 0, 80, 0.8),
+      0 0 4px;
+  }
+  20% {
+    text-shadow: 3px 0 1px rgba(0, 30, 255, 1), -3px 0 1px rgba(255, 0, 80, 0.8),
+      0 0 4px;
+  }
+  50% {
+    text-shadow: 2.7928974010788217px 0 1px rgba(0, 30, 255, 0.5),
+      -2.7928974010788217px 0 1px rgba(255, 0, 80, 0.4), 0 0 4px;
+  }
+  90% {
+    text-shadow: 0.4389924193300864px 0 1px rgba(0, 30, 255, 0.5),
+      -0.4389924193300864px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  /*87% {*/
+  /*  text-shadow: 2.7928974010788217px 0 1px rgba(0, 30, 255, 0.5),*/
+  /*    -2.7928974010788217px 0 1px rgba(255, 0, 80, 0.4), 0 0 4px;*/
+  /*}*/
+}
+
+@keyframes bootFlicker {
+  0% {
+    opacity: 0.1;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(0, 102, 255, 0.18) 0%,
+      rgba(0, 102, 255, 0.15) 5%,
+      rgba(0, 102, 255, 0.13) 10%,
+      rgba(0, 102, 255, 0.11) 15%,
+      rgba(0, 102, 255, 0.09) 20%,
+      rgba(0, 102, 255, 0.07) 30%,
+      rgba(0, 0, 0, 0.08) 60%,
+      rgba(0, 0, 0, 0.10) 100%
+    );
+    filter: blur(5px);
+  }
+  /*20% {*/
+  /*  opacity: 0.7;*/
+  /*  background: radial-gradient(*/
+  /*    ellipse at center,*/
+  /*    rgba(30, 255, 0, 0.15) 0%,*/
+  /*    rgba(30, 255, 0, 0.12) 5%,*/
+  /*    rgba(30, 255, 0, 0.1) 10%,*/
+  /*    rgba(30, 255, 0, 0.08) 15%,*/
+  /*    rgba(30, 255, 0, 0.06) 20%,*/
+  /*    rgba(30, 255, 0, 0.04) 30%,*/
+  /*    rgba(0, 0, 0, 0.05) 60%,*/
+  /*    rgba(0, 0, 0, 0.07) 100%*/
+  /*  );*/
+  /*  filter: blur(4px);*/
+  /*}*/
+  100% {
+    opacity: 0.7;
+    background: radial-gradient(
+      ellipse at center,
+    rgba(0, 102, 255, 0.18) 0%,
+    rgba(0, 102, 255, 0.15) 5%,
+    rgba(0, 102, 255, 0.13) 10%,
+    rgba(0, 102, 255, 0.11) 15%,
+    rgba(0, 102, 255, 0.09) 20%,
+    rgba(0, 102, 255, 0.07) 30%,
+    rgba(0, 0, 0, 0.08) 60%,
+    rgba(0, 0, 0, 0.10) 100%
+    );
+    filter: blur(5px);
+  }
+}
+
+.crt-boot-sequence::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9;
+  animation: bootFlicker 1.5s ease-out forwards;
+}
+
+/* CRT glow effect */
+.crt-glow {
+  position: relative;
+}
+
+.crt-glow::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  background: radial-gradient(
+    ellipse at center,
+    /* rgba(30, 255, 0, 0.15) 0%,
+    rgba(30, 255, 0, 0.12) 5%,
+    rgba(30, 255, 0, 0.1) 10%,
+    rgba(30, 255, 0, 0.08) 15%,
+    rgba(30, 255, 0, 0.06) 20%,
+    rgba(30, 255, 0, 0.04) 30%,
+    rgba(0, 0, 0, 0.05) 60%,
+    rgba(0, 0, 0, 0.07) 100% */
+    rgba(0, 102, 255, 0.18) 0%,
+    rgba(0, 102, 255, 0.15) 5%,
+    rgba(0, 102, 255, 0.13) 10%,
+    rgba(0, 102, 255, 0.11) 15%,
+    rgba(0, 102, 255, 0.09) 20%,
+    rgba(0, 102, 255, 0.07) 30%,
+    rgba(0, 0, 0, 0.08) 60%,
+    rgba(0, 0, 0, 0.10) 100%
+  );
+  pointer-events: none;
+  z-index: 51;
+  filter: blur(5px);
+}
+
+@keyframes glitchIn {
+  0% {
+    text-shadow: 0.4389924193300864px 0 1px rgba(0, 30, 255, 0.5),
+      -0.4389924193300864px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  100% {
+    text-shadow: 2.7928974010788217px 0 1px rgba(0, 30, 255, 1),
+      -2.7928974010788217px 0 1px rgba(255, 0, 80, 0.8), 0 0 5px;
+  }
+}
+@keyframes glitchOut {
+  0% {
+    text-shadow: 2.7928974010788217px 0 1px rgba(0, 30, 255, 1),
+      -2.7928974010788217px 0 1px rgba(255, 0, 80, 0.8), 0 0 5px;
+  }
+  100% {
+    text-shadow: 0.4389924193300864px 0 1px rgba(0, 30, 255, 0.5),
+      -0.4389924193300864px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+}
+
+a {
+  text-decoration: underline;
+  text-shadow: 0.4389924193300864px 0 1px rgba(0, 30, 255, 0.5),
+    -0.4389924193300864px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+}
+
+a:hover {
+  animation: glitchIn 0.1s forwards;
+}
+
+a:not(:hover) {
+  animation: glitchOut 0.5s forwards;
+}
+
+/* Add these styles */
+html, body {
+  background-color: #100F0F; /* Same as your dark theme background */
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* If you want it to match your theme settings, you can use: */
+html, body {
+  @apply bg-dark-background;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+.tech-section-divider {
+  margin: 0 0.5em;
+  opacity: 0.8;
+  position: relative;
+  cursor: pointer;
+}
+
+.tech-section-divider .divider-text {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  overflow: hidden;
+  /* Set initial width to 0 */
+  width: 0;
+  opacity: 0;
+  /* Add transition for all properties */
+  transition: width 0.3s ease-in-out, 
+              opacity 0.3s ease-in-out;
+  margin-left: 4px;
+}
+
+/* Set hover state with final width */
+.tech-section:hover .tech-section-divider .divider-text {
+  width: 100px; /* Or whatever max width you need */
+  opacity: 1;
+}
+
+.tech-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  color: #fff;
+}
+
+.tech-section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-left: 1em;
+}
