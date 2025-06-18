@@ -241,11 +241,15 @@ export const vi = openNeovimRepo;
 
 export const about = (args?: string[]): string => {
   const image = `<img src="/ascii-art.png" alt="signature" style="width: 400px; height: auto;" />`;
-  return `${image}<span class="w-full">Hi, my name is ${tag(config.name + '!')}\n
+  return `<span class="w-full">Hi, my name is ${tag(config.name + '!')}\n
 I'm in my third year at <a href="https://www.harvard.edu/" target="_blank" style="text-decoration: none; "><span class="crt-text" style="color: #EF3C2F; animation: inherit">McGill</span> University</a>, studying Computer Science. 
 
-This winter, I'm working with <a href="https://www.youtube.com/watch?v=NuKBeiHmGJA" target="_blank" style="text-decoration: none; "><span class="crt-text" style="color: #FBE3BF; animation: inherit">Beta</span> Technologies</a> as a Software Engineer Intern,
-developing structural analysis tooling to help certify eVTOL aircraft.
+This summer I'm working with <a href="https://www.autodesk.com/" target="_blank" style="text-decoration: none; "><span class="crt-text" style="color:#048C4A; animation: inherit">Autodesk</span></a> on the Flow Production Tracking team,
+writing software to <b>single</b> handedly fast track JJK season 3. Just kidding.
+
+Last winter, I joined <a href="https://www.youtube.com/watch?v=NuKBeiHmGJA" target="_blank" style="text-decoration: none; "><span class="crt-text" style="color: #FBE3BF; animation: inherit">Beta Technologies</span></a>, developing structural analysis tooling 
+to help certify eVTOL aircraft.
+
 
 I am interested in AI ethics, embedded systems, aviation, <a href="https://open.spotify.com/playlist/3df9VZ1kuzGDPO0yRgM5Ih?si=61884c77f73a4e5f" target="_blank" style="text-decoration: none; "><span class="crt-text" style="color: #CC8E15; animation: inherit">jazz</span></a>,
 and designing cool things with my hands, ears, heart, & brain.
