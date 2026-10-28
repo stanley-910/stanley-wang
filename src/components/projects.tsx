@@ -60,7 +60,7 @@ const dateColor = 'text-dark-gray';
                 details: [
                   'Developed a music recommendation engine, focusing on artistic diversity & user-taste profiling',
                   'Trained an XGBoost Genre Classifier with 200,000+ manually preprocessed tracks',
-                  'Deployed on AWS with a multi-container orchestration system using Docker and a ' + span(link('https://github.com/stanley-utf8/trading-fours/blob/master/.github/workflows/main.yml', 'custom CI/CD pipeline'), 'text-dark-blue'),
+                  'Deployed on AWS with a multi-container orchestration system using Docker and a ' + span(link('https://github.com/stanley-910/trading-fours/blob/master/.github/workflows/main.yml', 'custom CI/CD pipeline'), 'text-dark-blue'),
                   'NOTE: Sadly, I took the site down after a few months of uptime \n    because' + span(link('https://developer.spotify.com/blog/2024-11-27-changes-to-the-web-api', ' Spotify deprecated some core API endpoints '), 'text-dark-blue'),
                 ],
                 images: [
@@ -85,7 +85,7 @@ const dateColor = 'text-dark-gray';
                 ],
                 
                 links: [
-                    span(link('https://github.com/stanley-utf8/trading-fours', `${span('', '', 'font-size: 1.2em;')} Code`), ''),
+                    span(link('https://github.com/stanley-910/trading-fours', `${span('', '', 'font-size: 1.2em;')} Code`), ''),
                     span(link('https://www.youtube.com/watch?v=sx5btkY24hQ&feature=youtu.be', 'Video Demo & Why I Built It'), 'text-dark-blue'),
                 ]
             },
@@ -129,7 +129,7 @@ const dateColor = 'text-dark-gray';
                     'protocol-design'
                 ],
                 links: [
-                    span(link('https://github.com/stanley-utf8/chani', `${span('', '', 'font-size: 1.2em;')} Code`), '')
+                    span(link('https://github.com/stanley-910/chani', `${span('', '', 'font-size: 1.2em;')} Code`), '')
                 ]
             },
             

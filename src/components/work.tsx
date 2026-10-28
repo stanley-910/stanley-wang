@@ -90,15 +90,15 @@ export const workExperience = [
     year: '2024',
     jobs: [
       {
-        company: span(link('https://github.com/stanley-utf8/HealthyUI', 'AI Ethics Lab'), companyColor),
+        company: span(link('https://github.com/mcgill-ai-ethics/healthy-ui', 'AI Ethics Lab'), companyColor),
         position: span('Lead Undergraduate Researcher', positionColor),
-        duration: 'April - Present',
+        duration: 'May - December',
         details: [
           'Led a team of eight researchers in developing solutions for filter bubbles and disinformation',
           'Created Golang API library with C wrappers for Python integration',
           'Developed video content analyzer using a modified ' + span(link('https://aclanthology.org/W04-3252.pdf', 'TextRank'), 'text-dark-blue') + ' algorithm',
           'Presented novel research at ' + span(link('https://www.cs.mcgill.ca/undergrad/ucore/overview/', 'UCORE'), 'text-dark-blue') + ' 2024, McGill\'s Undergraduate Research Symposium',
-          'Currently overseeing steps towards further experimentation and publication under ' + span(link('https://www.mcgill.ca/continuingstudies/joseph-p-vybihal', 'Professor Vybihal'), 'text-dark-blue'),
+          'Supervised by ' + span(link('https://www.mcgill.ca/continuingstudies/joseph-p-vybihal', 'Professor Vybihal'), 'text-dark-blue'),
         ],
         tags: [
           'golang',
@@ -157,9 +157,9 @@ export const workExperience = [
           `style="text-decoration: underline"`,
         ),
         position: span('Software Engineering Intern', 'text-dark-green'),
-        duration: 'January - Present',
+        duration: 'January - April',
         details: [
-          'Engineering analysis tools for the Structures Team in Montreal,\n  │       aiding in the design & certification of Beta\'s eVTOL aircraft, the ' + span(link('https://www.beta.team/aircraft', 'Alia 250'), 'text-dark-blue')
+          'Built analysis tools for the Stress & Structures team in Montreal,\n  │       aiding in the design & certification of Beta\'s eVTOL aircraft, the ' + span(link('https://www.beta.team/aircraft', 'Alia 250'), 'text-dark-blue')
         ],
         tags: [
           'python',
@@ -185,10 +185,35 @@ export const workExperience = [
         ),
         position: span('Software Engineering Intern', positionColor),
         duration: 'May - August',
-        details: ['Incoming Autodesk Entertainment & Media Solutions Team'],
+        details: [
+          'Media & Entertainment team, working on Flow Production Tracking',
+          'Built a diagnostic pipeline and visual debugger for collaborative film-review sessions',
+          'Resolved a production login outage for two large studios within an afternoon',
+        ],
       },
     ],
-  },,
+  },
+  {
+    year: '2026',
+    jobs: [
+      {
+        id: 'ea',
+        company: span(
+          link('https://www.ea.com', 'Electronic Arts'),
+          companyColor,
+          `style="text-decoration: underline"`,
+        ),
+        position: span('Software Engineering Intern', positionColor),
+        duration: 'May - August',
+        details: [
+          'Commerce & Identity team in Redwood City',
+          'Prototyped a personalized Madden Mobile shopping assistant, projecting $157K in annual revenue lift',
+          'Protected users from duplicate-charge risk through idempotent checkout retries and server-verified purchase recording',
+          'Built reusable agentic commerce components for expansion across EA\'s games and web stores',
+        ],
+      },
+    ],
+  },
 ];
 
 

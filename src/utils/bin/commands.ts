@@ -231,7 +231,7 @@ export const date = async (args: string[]): Promise<string> => {
 const openNeovimRepo = (args?: string[]): string => {
   const message = 'nerd';
   setTimeout(() => {
-    window.open(`https://github.com/stanley-utf8/.nvim`);
+    window.open(`https://github.com/stanley-910/.nvim`);
   }, 500);
   return message;
 };
@@ -242,12 +242,15 @@ export const vi = openNeovimRepo;
 export const about = (args?: string[]): string => {
   const image = `<img src="/ascii-art.png" alt="signature" style="width: 400px; height: auto;" />`;
   return `<span class="w-full">Hi, my name is ${tag(config.name + '!')}\n
-I'm in my third year at <a href="https://www.harvard.edu/" target="_blank" style="text-decoration: none; "><span class="crt-text" style="color: #EF3C2F; animation: inherit">McGill</span> University</a>, studying Computer Science. 
+I'm in my final year at <a href="https://www.mcgill.ca/" target="_blank" style="text-decoration: none; "><span class="crt-text" style="color: #EF3C2F; animation: inherit">McGill</span> University</a>, studying Computer Science, graduating in December 2026.
 
-This summer I'm working with <a href="https://www.autodesk.com/" target="_blank" style="text-decoration: none; "><span class="crt-text" style="color:#048C4A; animation: inherit">Autodesk</span></a> on the Flow Production Tracking team,
+This summer I interned at <a href="https://www.ea.com/" target="_blank" style="text-decoration: none; "><span class="crt-text" style="color: #FF4747; animation: inherit">Electronic Arts</span></a> on Commerce & Identity,
+prototyping a personalized shopping assistant for Madden Mobile.
+
+Last summer I was with <a href="https://www.autodesk.com/" target="_blank" style="text-decoration: none; "><span class="crt-text" style="color:#048C4A; animation: inherit">Autodesk</span></a> on the Flow Production Tracking team,
 writing software to <b>single</b> handedly fast track JJK season 3. Just kidding.
 
-Last winter, I joined <a href="https://www.youtube.com/watch?v=NuKBeiHmGJA" target="_blank" style="text-decoration: none; "><span class="crt-text" style="color: #FBE3BF; animation: inherit">Beta Technologies</span></a>, developing structural analysis tooling 
+Before that, I joined <a href="https://www.youtube.com/watch?v=NuKBeiHmGJA" target="_blank" style="text-decoration: none; "><span class="crt-text" style="color: #FBE3BF; animation: inherit">BETA Technologies</span></a>, developing structural analysis tooling 
 to help certify eVTOL aircraft.
 
 
@@ -255,7 +258,7 @@ I am interested in AI ethics, embedded systems, aviation, <a href="https://open.
 and designing cool things with my hands, ears, heart, & brain.
 
 <div class="tech-container">
-<span >\uf124 Montréal, QC</span><span>|</span>
+<span >\uf124 San Francisco, CA</span><span>|</span>
 
 <a href="https://github.com/${config.social.github
     }" target="_blank" style="text-decoration: none; "><span style="font-size: 1.2em; "></span> Github
@@ -271,7 +274,7 @@ and designing cool things with my hands, ears, heart, & brain.
 <a onclick="navigator.clipboard.writeText('${config.email}')"
  style="cursor: pointer; text-decoration: none;" title="Copy to clipboard"> Email</a>
 <span>|</span>
-<a class="crt-text" href="https://github.com/stanley-utf8/dotfiles" target="_blank" style="text-decoration: none; "><span style="animation: inherit" title="My Dotfiles">...files</span></a>
+<a class="crt-text" href="https://github.com/stanley-910/dotfiles" target="_blank" style="text-decoration: none; "><span style="animation: inherit" title="My Dotfiles">...files</span></a>
 </div></span></div>
 <div class="flex flex-col gap-4">
 <div style="width: 335px;"><i style="opacity: 0.8">Languages & Tools</i>  <span style="opacity: 0.5">──────────────────────────</span>
@@ -316,8 +319,8 @@ and designing cool things with my hands, ears, heart, & brain.
   </div>
   </div><span><i style="opacity: 0.8">Recents</i>  <span style="opacity: 0.5">──────────────────────────────────────────────────────────────</span>
 
-  • I've been catching up on <a href="https://adventofcode.com/2024" target="_blank" style="text-decoration: none; "><span class="crt-text" style="color: #90EE90; animation: inherit">Advent of Code 2024</span></a> in my <a href="https://github.com/stanley-utf8/advent-of-code-2024" target="_blank" class="text-light-blue dark:text-dark-blue">attempt</a> to learn Rust 
-  • I developed <a href="https://github.com/stanley-utf8/chani" target="_blank" style="text-decoration: none; "><span class="crt-text" style="color: #F18904; animation: inherit">Chani</span></a>, a command-line chatroom with OCaml using websockets and TCP
+  • I've been catching up on <a href="https://adventofcode.com/2024" target="_blank" style="text-decoration: none; "><span class="crt-text" style="color: #90EE90; animation: inherit">Advent of Code 2024</span></a> in my <a href="https://github.com/stanley-910/advent-of-code-2024" target="_blank" class="text-light-blue dark:text-dark-blue">attempt</a> to learn Rust 
+  • I developed <a href="https://github.com/stanley-910/chani" target="_blank" style="text-decoration: none; "><span class="crt-text" style="color: #F18904; animation: inherit">Chani</span></a>, a command-line chatroom in OCaml over TCP
   • I helped program and compose a soundtrack for <a href="https://averageosiris.itch.io/datamines" target="_blank" style="text-decoration: none; "><span class="crt-text" style="color: #FFB6C1; animation: inherit">DATAMINES</span></a>,
     a retro 2D platformer <a href="https://github.com/CRook99/DATAMINES" target="_blank" class="text-light-blue dark:text-dark-blue">coded</a> in 36 hours 
 </span>
